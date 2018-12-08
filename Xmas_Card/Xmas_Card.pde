@@ -15,10 +15,10 @@ int h6 = 200; //bottom row of lights
 int s = 150; //variable for snowman circle's x-values
 void setup(){
   size(400, 400);//sets up the screen, background is white
-  background(0);
+  //background(0);
 }
 void draw(){
-  
+  background(0);
 //SNOW ON BOTTOM:
 fill(255, 255, 255);
 rect(0, 340, 400, 100);
@@ -116,11 +116,27 @@ line(165, 300, 178, 285);//right arm
 
 //FALLING SNOW
 
-for(int i = 0; i<70; )//for loop to make snow fall
+for(int i = 0; i<100; )//for loop to make snow fall
     {
     noStroke();//no outlines
     fill(255);//white
-    ellipse((random(400)), random(400), 3, 3);//position of flakes
+    ellipse((random(400)), random(400), 6, 6);//position of flakes
+    stroke(0, 0, 0);//back to black outlines
+    break;
+    }
+    for(int i = 0; i<100; )//for loop to make snow fall
+    {
+    noStroke();//no outlines
+    fill(255);//white
+    ellipse((random(400)), random(400), 6, 6);//position of flakes
+    stroke(0, 0, 0);//back to black outlines
+    break;
+    }
+    for(int i = 0; i<100; )//for loop to make snow fall
+    {
+    noStroke();//no outlines
+    fill(255);//white
+    ellipse((random(400)), random(400), 6, 6);//position of flakes
     stroke(0, 0, 0);//back to black outlines
     break;
     }
