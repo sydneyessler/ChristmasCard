@@ -116,12 +116,13 @@ line(165, 300, 178, 285);//right arm
 
 //FALLING SNOW
 
+if(mousePressed){
+
 for(int i = 0; i<100; )//for loop to make snow fall
     {
     noStroke();//no outlines
     fill(255);//white
     ellipse((random(400)), random(400), 6, 6);//position of flakes
-    stroke(0, 0, 0);//back to black outlines
     break;
     }
     for(int i = 0; i<100; )//for loop to make snow fall
@@ -129,7 +130,6 @@ for(int i = 0; i<100; )//for loop to make snow fall
     noStroke();//no outlines
     fill(255);//white
     ellipse((random(400)), random(400), 6, 6);//position of flakes
-    stroke(0, 0, 0);//back to black outlines
     break;
     }
     for(int i = 0; i<100; )//for loop to make snow fall
@@ -137,10 +137,11 @@ for(int i = 0; i<100; )//for loop to make snow fall
     noStroke();//no outlines
     fill(255);//white
     ellipse((random(400)), random(400), 6, 6);//position of flakes
-    stroke(0, 0, 0);//back to black outlines
     break;
     }
     
+}
+    stroke(0, 0, 0);//back to black outlines
     fill(158, 158, 141);//white for moon
     moonx = moonx+speed;
     ellipse(moonx, 100, 50, 50);//moon
