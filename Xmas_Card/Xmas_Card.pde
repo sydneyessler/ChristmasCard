@@ -1,4 +1,4 @@
-
+SnowFlake []sf;
 float moonx = 20;
 float speed=.5;
 int t = 10;
@@ -15,7 +15,11 @@ int h6 = 200; //bottom row of lights
 int s = 150; //variable for snowman circle's x-values
 void setup(){
   size(400, 400);//sets up the screen, background is white
-  //background(0);
+  sf = new SnowFlake[100];
+  for(int i=0; i<sf.length;i++)
+  {
+    sf[i] = new SnowFlake();
+  }
 }
 void draw(){
   background(0);
@@ -116,31 +120,14 @@ line(165, 300, 178, 285);//right arm
 
 //FALLING SNOW
 
-if(mousePressed){
 
-for(int i = 0; i<100; )//for loop to make snow fall
-    {
-    noStroke();//no outlines
-    fill(255);//white
-    ellipse((random(400)), random(400), 6, 6);//position of flakes
-    break;
-    }
-    for(int i = 0; i<100; )//for loop to make snow fall
-    {
-    noStroke();//no outlines
-    fill(255);//white
-    ellipse((random(400)), random(400), 6, 6);//position of flakes
-    break;
-    }
-    for(int i = 0; i<100; )//for loop to make snow fall
-    {
-    noStroke();//no outlines
-    fill(255);//white
-    ellipse((random(400)), random(400), 6, 6);//position of flakes
-    break;
-    }
+  for(int i =0; i<sf.length; i++)
+  {
+    sf[i].move();
+    sf[i].show();
+  }
     
-}
+
     stroke(0, 0, 0);//back to black outlines
     fill(158, 158, 141);//white for moon
     moonx = moonx+speed;
