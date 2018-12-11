@@ -30,14 +30,14 @@ rect(0, 340, 400, 100);
 //HOUSE:
 fill(64, 19, 22);//brown
 rect(124,190,150,150);//house
-fill(255, 0, 0);//red
-triangle(100,200,200,100, 300, 200);//roof of house
-fill(15, 186, 189);//blue
-ellipse(200,160,40,40);//circle window
-fill(0,0,0);//black
-strokeWeight(5);//thicker line
-line(182,160, 216, 160);//horizontal window line on circle
-line(199,142, 199,177);//verticle window line on circle
+//fill(255, 0, 0);//red
+//triangle(100,200,200,100, 300, 200);//roof of house
+//fill(15, 186, 189);//blue
+//ellipse(200,160,40,40);//circle window
+//fill(0,0,0);//black
+//strokeWeight(5);//thicker line
+//line(182,160, 216, 160);//horizontal window line on circle
+//line(199,142, 199,177);//verticle window line on circle
 fill(238, 255, 0);//yellow
 strokeWeight(1);//change back to normal thickness of line
 rect(175, 250,50, 90);//door
@@ -137,7 +137,16 @@ line(165, 300, 178, 285);//right arm
     if(moonx<25){            //animation 
        speed = 0.5;}
        
-       
+   fill(255, 0, 0);//red
+    triangle(100,200,200,100, 300, 200);//roof of house
+fill(15, 186, 189);//blue
+ellipse(200,160,40,40);//circle window
+fill(0,0,0);//black
+stroke(15);
+line(182,160, 216, 160);//horizontal window line on circle
+line(199,142, 199,177);//verticle window line on circle
+stroke(1);
+
 fill(random(255), random(255), random(255));
 //ellipse(100, h6, t, t);
 //ellipse(115, h5, t, t);
@@ -186,5 +195,5 @@ ellipse(322, h4, t, t);
 ellipse(334, h3, t, t);
 ellipse(344, h4, t, t);
        
- 
+ //triangle(100,200,200,100, 300, 200);//roof of house
 }
